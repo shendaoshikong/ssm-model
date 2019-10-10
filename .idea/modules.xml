@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../common-pom-manage/common-pom-manage.iml" filepath="$PROJECT_DIR$/../common-pom-manage/common-pom-manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-pom-manage/common-pom-manage.iml" filepath="$PROJECT_DIR$/../common-pom-manage/common-pom-manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-pom-manage/pom-base/pom-base.iml" filepath="$PROJECT_DIR$/../common-pom-manage/pom-base/pom-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-pom-manage/pom-base/pom-base.iml" filepath="$PROJECT_DIR$/../common-pom-manage/pom-base/pom-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-pom-manage/pom-mybatis/pom-mybatis.iml" filepath="$PROJECT_DIR$/../common-pom-manage/pom-mybatis/pom-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-pom-manage/pom-mysql/pom-mysql.iml" filepath="$PROJECT_DIR$/../common-pom-manage/pom-mysql/pom-mysql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-pom-manage/pom-springboot/pom-springboot.iml" filepath="$PROJECT_DIR$/../common-pom-manage/pom-springboot/pom-springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-pom-manage/pom-springmvc/pom-springmvc.iml" filepath="$PROJECT_DIR$/../common-pom-manage/pom-springmvc/pom-springmvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-pom-manage/pom-springmvc/pom-springmvc.iml" filepath="$PROJECT_DIR$/../common-pom-manage/pom-springmvc/pom-springmvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-Controller/ssm-Controller.iml" filepath="$PROJECT_DIR$/ssm-Controller/ssm-Controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-mapper/ssm-mapper.iml" filepath="$PROJECT_DIR$/ssm-mapper/ssm-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ssm-model.iml" filepath="$PROJECT_DIR$/.idea/ssm-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-pojo/ssm-pojo.iml" filepath="$PROJECT_DIR$/ssm-pojo/ssm-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-service/ssm-service.iml" filepath="$PROJECT_DIR$/ssm-service/ssm-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-web/ssm-web.iml" filepath="$PROJECT_DIR$/ssm-web/ssm-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
+    </modules>
+  </component>
+</project>

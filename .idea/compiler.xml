@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="czp-common" />
+        <module name="czp-mapper" />
+        <module name="czp-service" />
+        <module name="czp-web" />
+        <module name="pom-base" />
+        <module name="pom-mybatis" />
+        <module name="pom-mysql" />
+        <module name="pom-springboot" />
+        <module name="pom-springmvc" />
+        <module name="ssm-Controller" />
+        <module name="ssm-mapper" />
+        <module name="ssm-pojo" />
+        <module name="ssm-service" />
+        <module name="ssm-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common-pom-manage" target="1.7" />
+      <module name="czp-common" target="1.7" />
+      <module name="czp-manage" target="1.7" />
+      <module name="czp-mapper" target="1.7" />
+      <module name="czp-parent" target="1.7" />
+      <module name="czp-pom-base" target="1.7" />
+      <module name="czp-pom-mybatis" target="1.7" />
+      <module name="czp-pom-mysql" target="1.7" />
+      <module name="czp-pom-springmvc" target="1.7" />
+      <module name="czp-pom-ssh" target="1.7" />
+      <module name="czp-pom-ssm" target="1.7" />
+      <module name="czp-pom-tomcat" target="1.7" />
+      <module name="czp-service" target="1.7" />
+      <module name="czp-web" target="1.7" />
+      <module name="dd" target="1.7" />
+      <module name="pom-base" target="1.7" />
+      <module name="pom-mybatis" target="1.7" />
+      <module name="pom-mysql" target="1.7" />
+      <module name="pom-springboot" target="1.7" />
+      <module name="pom-springmvc" target="1.7" />
+      <module name="ssm-common" target="1.7" />
+      <module name="ssm-Controller" target="1.7" />
+      <module name="ssm-manage" target="1.7" />
+      <module name="ssm-manage-mapper" target="1.7" />
+      <module name="ssm-manage-pojo" target="1.7" />
+      <module name="ssm-manage-service" target="1.7" />
+      <module name="ssm-manage-web" target="1.7" />
+      <module name="ssm-mapper" target="1.7" />
+      <module name="ssm-model" target="1.5" />
+      <module name="ssm-parent" target="1.7" />
+      <module name="ssm-pojo" target="1.7" />
+      <module name="ssm-service" target="1.7" />
+      <module name="ssm-web" target="1.7" />
+      <module name="utils" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

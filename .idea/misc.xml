@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm-manage/pom.xml" />
+        <option value="$PROJECT_DIR$/../pom-base/pom.xml" />
+        <option value="$PROJECT_DIR$/utils/pom.xml" />
+        <option value="$PROJECT_DIR$/../common-pom-manage/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../pom-base/pom-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/../pom-base/pom-mysql/pom.xml" />
+        <option value="$PROJECT_DIR$/../pom-base/pom-springmvc/pom.xml" />
+        <option value="$PROJECT_DIR$/../pom-base/pom-ssh/pom.xml" />
+        <option value="$PROJECT_DIR$/../pom-base/pom-ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/../pom-base/pom-tomcat/pom.xml" />
+        <option value="$PROJECT_DIR$/../pom-base/pom.xml" />
+        <option value="$PROJECT_DIR$/dd/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm-manage/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>CorrectnessLintAndroid</id>
+          </State>
+          <State>
+            <id>Gradle</id>
+          </State>
+          <State>
+            <id>LintAndroid</id>
+          </State>
+          <State>
+            <id>Maven</id>
+          </State>
+          <State>
+            <id>OSGi</id>
+          </State>
+          <State>
+            <id>Probable bugsGradle</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>
