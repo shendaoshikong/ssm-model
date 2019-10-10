@@ -57,7 +57,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-websocket:5.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.6" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.4" />
           <element id="archive" name="pom-mybatis-1.0-SNAPSHOT.jar">
             <element id="module-output" name="pom-mybatis" />
           </element>

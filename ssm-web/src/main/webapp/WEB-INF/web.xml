@@ -1,12 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <!--这点还没搞懂，暂时放着-->
 <!--<import resource="classpath*:SpringMVC Application Context">-->
 
 
-<web-app>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee"
+         version="2.5">
   <display-name>Archetype Created Web Application</display-name>
 
   <!--log4j2-begin-->
@@ -14,16 +18,16 @@
     <listener-class>org.apache.logging.log4j.web.Log4jServletContextListener</listener-class>
   </listener>
   <filter>
-  <filter-name>log4jServletFilter</filter-name>
-  <filter-class>org.apache.logging.log4j.web.Log4jServletFilter</filter-class>
+    <filter-name>log4jServletFilter</filter-name>
+    <filter-class>org.apache.logging.log4j.web.Log4jServletFilter</filter-class>
   </filter>
   <filter-mapping>
-  <filter-name>log4jServletFilter</filter-name>
-  <url-pattern>/*</url-pattern>
-  <dispatcher>REQUEST</dispatcher>
-  <dispatcher>FORWARD</dispatcher>
-  <dispatcher>INCLUDE</dispatcher>
-  <dispatcher>ERROR</dispatcher>
+    <filter-name>log4jServletFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+    <dispatcher>ERROR</dispatcher>
   </filter-mapping>
   <!--log4j2-end-->
 
@@ -34,11 +38,11 @@
 
   <!-- 加载spring容器 -->
   <context-param>
-  <param-name>contextConfigLocation</param-name>
-  <param-value>classpath*:../spring/applicationContext-*.xml</param-value>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath*:../spring/applicationContext-*.xml</param-value>
   </context-param>
   <listener>
-  <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
   <!-- 编码过滤器,解决post乱码 -->
@@ -59,8 +63,8 @@
   <servlet>
     <description>springmvcServlet</description>
     <servlet-name>springMvc</servlet-name>
-  <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-   <!--contextConfigLocation不是必须的， 如果不配置contextConfigLocation， springmvc的配置文件默认在：WEB-INF/servlet的name+"-servlet.xml" -->
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!--contextConfigLocation不是必须的， 如果不配置contextConfigLocation， springmvc的配置文件默认在：WEB-INF/servlet的name+"-servlet.xml" -->
     <init-param>
       <description>springmvcServlet</description>
       <param-name>contextConfigLocation</param-name>

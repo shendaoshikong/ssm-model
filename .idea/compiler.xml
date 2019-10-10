@@ -13,7 +13,6 @@
         <module name="pom-base" />
         <module name="pom-mybatis" />
         <module name="pom-mysql" />
-        <module name="pom-springboot" />
         <module name="pom-springmvc" />
         <module name="ssm-Controller" />
         <module name="ssm-mapper" />

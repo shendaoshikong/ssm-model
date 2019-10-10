@@ -19,6 +19,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/../common-pom-manage/pom-springboot/pom.xml" />
         <option value="$PROJECT_DIR$/../pom-base/pom-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/../pom-base/pom-mysql/pom.xml" />
         <option value="$PROJECT_DIR$/../pom-base/pom-springmvc/pom.xml" />
