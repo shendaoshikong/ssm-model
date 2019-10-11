@@ -31,18 +31,6 @@
   </filter-mapping>
   <!--log4j2-end-->
 
-  <!-- 配置加载Spring文件的监听器 -->
-  <!--classpath 和 classpaht*的区别
-  classpath* 会查找根目录下所有的文件,至到找到匹配文件即可。
-  classpath只会在/WEB-INF/classes中查找。-->
-  <context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>classpath*:../spring/applicationContext-*.xml</param-value>
-  </context-param>
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
-
   <!-- 编码过滤器,解决post乱码 -->
   <filter>
     <filter-name>encoding</filter-name>
@@ -58,6 +46,17 @@
     <!--<url-pattern>/*</url-pattern>-->
   </filter-mapping>
 
+  <!-- 配置加载Spring文件的监听器 -->
+  <!--classpath 和 classpaht*的区别
+  classpath* 会查找根目录下所有的文件,至到找到匹配文件即可。
+  classpath只会在/WEB-INF/classes中查找。-->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath*:spring/ApplicationContext.xml</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
 
   <!-- springmvc的前端控制器 -->
   <servlet>
@@ -68,7 +67,7 @@
     <init-param>
       <description>springmvcServlet</description>
       <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:../spring/springmvc.xml</param-value>
+      <param-value>classpath:spring/springmvc.xml</param-value>
     </init-param>
     <init-param>
       <param-name>activeReverseAjaxEnabled</param-name>
@@ -81,5 +80,30 @@
     <servlet-name>springMvc</servlet-name>
     <url-pattern>*.action</url-pattern>
   </servlet-mapping>
+
+
+  <!--<filter>-->
+    <!--<filter-name>SecurityFilter</filter-name>-->
+    <!--<filter-class>net.zhsz.util.LoginCheckFilter</filter-class>-->
+  <!--</filter>-->
+
+  <!--<filter-mapping>-->
+    <!--<filter-name>SecurityFilter</filter-name>-->
+    <!--<url-pattern>*.jsp</url-pattern>-->
+  <!--</filter-mapping>-->
+
+  <!--<filter-mapping>-->
+    <!--<filter-name>SecurityFilter</filter-name>-->
+    <!--<url-pattern>/app/*</url-pattern>-->
+  <!--</filter-mapping>-->
+
+  <!--<session-config>-->
+    <!--<session-timeout>30</session-timeout>-->
+  <!--</session-config>-->
+
+  <!--<error-page>-->
+    <!--<exception-type>java.lang.Exception</exception-type>-->
+    <!--<location>../500.html</location>-->
+  <!--</error-page>-->
 
 </web-app>
