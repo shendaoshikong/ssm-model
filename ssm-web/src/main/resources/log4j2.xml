@@ -7,13 +7,17 @@
         <property name="FILE_NAME">log</property>
     </properties>
 
-    <!-- 控制台输出 -->
     <Appenders>
+        <!-- 控制台输出格式控制 -->
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %m%n" />
+            <!--过滤掉level等级之前的-->
+            <ThresholdFilter level="WARN"/>
         </Console>
-
-        <!--log.gz日志文件存档压缩-->
+        <!--<Async name="Async">-->
+            <!--<AppenderRef ref="CONSOLE"/>-->
+        <!--</Async>-->
+        <!--过滤器,log.gz日志文件存档压缩-->
         <RollingFile name="RollingFileDebug" fileName="${LOG_HOME}/debug.log"
                      filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd}-%i.log.gz"
                      immediateFlush="true">
@@ -21,6 +25,24 @@
             <Filters>
                 <ThresholdFilter level="DEBUG"/>
                 <ThresholdFilter level="INFO" onMatch="DENY" onMismatch="NEUTRAL"/>
+            </Filters>
+            <PatternLayout
+                    pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <!--最多保留20个日志文件-->
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+
+        <RollingFile name="RollingFileInfo" fileName="${LOG_HOME}/info.log"
+                     filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd}-%i.log.gz"
+                     immediateFlush="true">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            <Filters>
+                <ThresholdFilter level="INFO"/>
+                <ThresholdFilter level="WARN" onMatch="DENY" onMismatch="NEUTRAL"/>
             </Filters>
             <PatternLayout
                     pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n" />
@@ -87,22 +109,25 @@
 
     <Loggers>
         <!--过滤掉simm.spring.restapi一些无用的DEBUG信息-->
-        <logger name="simm.spring.restapi" level="INFO"/>
+        <Logger name="EventLogger" level="info" additivity="false"/>
         <!--下面是输入到各种文件，很重要-->
         <Root level="all">
             <appender-ref ref="Console"/>
-            <appender-ref ref="RollingFileDebug"/>
-            <appender-ref ref="RollingFileInfo"/>
-            <appender-ref ref="RollingFileWarn"/>
-            <appender-ref ref="RollingFileError"/>
-            <appender-ref ref="RollingFileFatal"/>
+            <!--<appender-ref ref="RollingFileDebug"/>-->
+            <!--<appender-ref ref="RollingFileInfo"/>-->
+            <!--<appender-ref ref="RollingFileWarn"/>-->
+            <!--<appender-ref ref="RollingFileError"/>-->
+            <!--<appender-ref ref="RollingFileFatal"/>-->
         </Root>
 
-        <!-- show sql-->
-        <logger name="com.czp.mapper" level="DEBUG"/>
-        <root level="DEBUG">
-            <appender-ref ref="console" />
-        </root>
+        <!-- 打印mybatis的sql代码逻辑-->
+        <!--<Root level="info" includeLocation="true">-->
+            <!--<AppenderRef ref="Async" />-->
+        <!--</Root>-->
+        <!--<logger name="com.czp.mapper">-->
+            <!--<level>DEBUG</level>-->
+        <!--</logger>-->
+
     </Loggers>
 
 </Configuration>

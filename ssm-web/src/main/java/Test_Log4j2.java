@@ -5,14 +5,12 @@ public class Test_Log4j2 {
     static Logger logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
 
     public static void main(String[] args) {
-        for(int i=0; i<200; i++){
             logger.trace("trace message");
             logger.debug("debug message");
             logger.info("info message");
             logger.warn("warn message");
             logger.error("error message");
             logger.fatal("fatal message");
-        }
         System.out.println("Hello World!");
 
         try {

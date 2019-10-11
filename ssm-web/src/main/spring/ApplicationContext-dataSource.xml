@@ -104,19 +104,19 @@
     <!--</bean>-->
 
     <!--2,方法名正则匹配拦截配置-->
-    <bean id="druid-stat-interceptor"
-          class="com.alibaba.druid.support.spring.stat.DruidStatInterceptor">
-    </bean>
+    <!--<bean id="druid-stat-interceptor"-->
+          <!--class="com.alibaba.druid.support.spring.stat.DruidStatInterceptor">-->
+    <!--</bean>-->
 
-    <bean id="druid-stat-pointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut"
-          scope="prototype">
-        <property name="patterns">
-            <list>
-                <value>com.czp.service.*</value>
-                <value>com.czp.mapper.*</value>
-            </list>
-        </property>
-    </bean>
+    <!--<bean id="druid-stat-pointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut"-->
+          <!--scope="prototype">-->
+        <!--<property name="patterns">-->
+            <!--<list>-->
+                <!--<value>com.czp.service.*</value>-->
+                <!--<value>com.czp.mapper.*</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
     <!-- 创建基于类的代理 -->
     <!--有些情况下，可能你需要配置proxy-target-class，例如：-->
