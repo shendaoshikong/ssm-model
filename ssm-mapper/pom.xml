@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ssm-mapper</artifactId>
+    <packaging>jar</packaging>
 
     <name>ssm-mapper</name>
     <!-- FIXME change it to the project's website -->
@@ -30,6 +31,17 @@
     </dependencies>
 
     <build>
+        <!--原因是：在编辑的时候把mapper文件给漏掉了-->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->

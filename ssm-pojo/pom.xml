@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ssm-pojo</artifactId>
+    <packaging>jar</packaging>
 
     <name>ssm-pojo</name>
     <!-- FIXME change it to the project's website -->

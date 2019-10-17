@@ -26,66 +26,66 @@
         <property name="username" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.password}"/>
         <property name="driverClassName" value="${jdbc.driverClassName}"/>
-        <property name = "filters" value = "${filters}" />
-        <!-- 最大并发连接数 -->
-        <property name = "maxActive" value = "${maxActive}" />
+        <!--<property name = "filters" value = "${filters}" />-->
+        <!--<property name = "maxActive" value = "${maxActive}" />-->
         <!-- 初始化连接数量 -->
-        <property name = "initialSize" value = "${initialSize}" />
+        <!--<property name = "initialSize" value = "${initialSize}" />-->
         <!-- 配置获取连接等待超时的时间 -->
-        <property name = "maxWait" value = "${maxWait}" />
+        <!--<property name = "maxWait" value = "${maxWait}" />-->
         <!-- 最小空闲连接数 -->
-        <property name = "minIdle" value = "${minIdle}" />
+        <!--<property name = "minIdle" value = "${minIdle}" />-->
         <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
-        <property name = "timeBetweenEvictionRunsMillis" value ="${timeBetweenEvictionRunsMillis}" />
+        <!--<property name = "timeBetweenEvictionRunsMillis" value ="${timeBetweenEvictionRunsMillis}" />-->
         <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
-        <property name = "minEvictableIdleTimeMillis" value ="${minEvictableIdleTimeMillis}" />
+        <!--<property name = "minEvictableIdleTimeMillis" value ="${minEvictableIdleTimeMillis}" />-->
         <!--        <property name = "validationQuery" value = "${validationQuery}" />     -->
-        <property name = "testWhileIdle" value = "${testWhileIdle}" />
-        <property name = "testOnBorrow" value = "${testOnBorrow}" />
-        <property name = "testOnReturn" value = "${testOnReturn}" />
-        <property name = "maxOpenPreparedStatements" value ="${maxOpenPreparedStatements}" />
+        <!--<property name = "testWhileIdle" value = "${testWhileIdle}" />-->
+        <!--<property name = "testOnBorrow" value = "${testOnBorrow}" />-->
+        <!--<property name = "testOnBorrow" value = "${testOnBorrow}" />-->
+        <!--<property name = "testOnReturn" value = "${testOnReturn}" />-->
+        <!--<property name = "maxOpenPreparedStatements" value ="${maxOpenPreparedStatements}" />-->
         <!-- 打开 removeAbandoned 功能 -->
-        <property name = "removeAbandoned" value = "${removeAbandoned}" />
+        <!--<property name = "removeAbandoned" value = "${removeAbandoned}" />-->
         <!-- 1800 秒，也就是 30 分钟 -->
-        <property name = "removeAbandonedTimeout" value ="${removeAbandonedTimeout}" />
-        <!-- 关闭 abanded 连接时输出错误日志 -->
-        <property name = "logAbandoned" value = "${logAbandoned}" />
-        <property name="proxyFilters">
-            <list>
-                <ref bean="wall-filter"/>
-                <ref bean="stat-filter"/>
-                <ref bean="log-filter"/>
-            </list>
-        </property>
+        <!--<property name = "removeAbandonedTimeout" value ="${removeAbandonedTimeout}" />-->
+        <!-- 关闭 abanded 连接时输出错误日志-err -->
+        <!--<property name = "logAbandoned" value = "${logAbandoned}" />-->
+        <!--<property name="proxyFilters">-->
+            <!--<list>-->
+                <!--<ref bean="stat-filter"/>-->
+                <!--<ref bean="wall-filter"/>-->
+                <!--<ref bean="log-filter"/>-->
+            <!--</list>-->
+        <!--</property>-->
     </bean>
 
     <!-- 慢SQL记录 -->
-    <bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter">
-        <!-- 慢sql时间设置,即执行时间大于200毫秒的都是慢sql -->
-        <property name="slowSqlMillis" value="2000"/>
-        <property name="logSlowSql" value="true"/>
-    </bean>
+    <!--<bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter">-->
+        <!--&lt;!&ndash; 慢sql时间设置,即执行时间大于200毫秒的都是慢sql &ndash;&gt;-->
+        <!--<property name="slowSqlMillis" value="2000"/>-->
+        <!--<property name="logSlowSql" value="true"/>-->
+    <!--</bean>-->
 
-    <bean id="log-filter" class="com.alibaba.druid.filter.logging.Log4jFilter">
-        <property name="dataSourceLogEnabled" value="true" />
-        <property name="statementExecutableSqlLogEnable" value="true" />
-    </bean>
+    <!--<bean id="log-filter" class="com.alibaba.druid.filter.logging.Log4jFilter">-->
+        <!--<property name="dataSourceLogEnabled" value="true" />-->
+        <!--<property name="statementExecutableSqlLogEnable" value="true" />-->
+    <!--</bean>-->
 
     <!-- 防御SQL攻击 -->
-    <bean id="wall-filter" class="com.alibaba.druid.wall.WallFilter">
-        <property name="config" ref="wall-config" />
-        <property name="logViolation" value="true" />
-        <!--         <property name="throwException" value="false" />   -->
-    </bean>
+    <!--<bean id="wall-filter" class="com.alibaba.druid.wall.WallFilter">-->
+        <!--<property name="config" ref="wall-config" />-->
+        <!--<property name="logViolation" value="true" />-->
+        <!--&lt;!&ndash;         <property name="throwException" value="false" />   &ndash;&gt;-->
+    <!--</bean>-->
 
-    <bean id="wall-config" class="com.alibaba.druid.wall.WallConfig">
-        <property name="deleteAllow" value="false" />
-        <property name="truncateAllow" value="false" />
-        <property name="dropTableAllow" value="false" />
-        <property name="alterTableAllow" value="false" />
-        <property name="deleteWhereNoneCheck" value="false" />
-        <property name="updateWhereNoneCheck" value="false" />
-    </bean>
+    <!--<bean id="wall-config" class="com.alibaba.druid.wall.WallConfig">-->
+        <!--<property name="deleteAllow" value="false" />-->
+        <!--<property name="truncateAllow" value="false" />-->
+        <!--<property name="dropTableAllow" value="false" />-->
+        <!--<property name="alterTableAllow" value="false" />-->
+        <!--<property name="deleteWhereNoneCheck" value="false" />-->
+        <!--<property name="updateWhereNoneCheck" value="false" />-->
+    <!--</bean>-->
 
     <!-- Druid提供了Spring和Jdbc的关联监控 -->
     <!--1,按类型拦截配置-->
@@ -149,24 +149,25 @@
 
     <!-- druid  spring监控   end -->
 
-
-
-
-    <!-- 配置dao层扫描器，加载mapper代理对象-->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.czp.mapper" />
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
-    </bean>
-
-    <!-- 配置MyBatis工厂SqlSessionFactory -->
+    <!-- 配置MyBatis工厂SqlSessionFactory，特别注意，如果是分布式项目的话一定要小心文件路径问题
+    classpath:到你的class路径中查找文件，
+    classpath*:不仅包含class的路径，还包括jar文件中（class路径）进行查找
+     -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!--注入数据源 -->
         <property name="dataSource" ref="dataSource" />
-        <!-- 自动扫描Mybatis的Mapper.xml文件 -->
-        <property name="mapperLocations" value="classpath:com/czp/mapper/*.xml" />
         <!--指定MyBatis核心配置文件位置 -->
         <property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml" />
+        <!-- 自动扫描Mybatis的Mapper.xml文件 -->
+        <property name="mapperLocations" value="classpath*:com/czp/mapper/*.xml" />
     </bean>
+
+    <!--&lt;!&ndash; 配置dao层扫描器，加载mapper代理对象&ndash;&gt;-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.czp.dao" />
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+    </bean>
+
 
     <!-- 扫描Service -->
     <context:component-scan base-package="com.czp.service" />
@@ -192,6 +193,8 @@
             <tx:method name="get*" propagation="SUPPORTS" read-only="true"/>
         </tx:attributes>
     </tx:advice>
+
+
     <!-- 切面 -->
     <!--<aop:config>-->
     <!--<aop:advisor advice-ref="txAdvice"-->

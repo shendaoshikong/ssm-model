@@ -19,6 +19,7 @@
         <module name="ssm-pojo" />
         <module name="ssm-service" />
         <module name="ssm-web" />
+        <module name="utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

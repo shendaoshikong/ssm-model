@@ -13,8 +13,8 @@
         <option value="$PROJECT_DIR$/ssm-utils/pom.xml" />
         <option value="$PROJECT_DIR$/ssm-manage/pom.xml" />
         <option value="$PROJECT_DIR$/../pom-base/pom.xml" />
-        <option value="$PROJECT_DIR$/utils/pom.xml" />
         <option value="$PROJECT_DIR$/../common-pom-manage/pom.xml" />
+        <option value="$PROJECT_DIR$/utils/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

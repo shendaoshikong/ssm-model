@@ -3,10 +3,6 @@
         "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-<!--这点还没搞懂，暂时放着-->
-<!--<import resource="classpath*:SpringMVC Application Context">-->
-
-
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee"
@@ -97,13 +93,13 @@
     <!--<url-pattern>/app/*</url-pattern>-->
   <!--</filter-mapping>-->
 
-  <!--<session-config>-->
-    <!--<session-timeout>30</session-timeout>-->
-  <!--</session-config>-->
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
 
-  <!--<error-page>-->
-    <!--<exception-type>java.lang.Exception</exception-type>-->
-    <!--<location>../500.html</location>-->
-  <!--</error-page>-->
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/Exception.html</location>
+  </error-page>
 
 </web-app>
