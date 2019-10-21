@@ -101,5 +101,9 @@
     <exception-type>java.lang.Exception</exception-type>
     <location>/Exception.html</location>
   </error-page>
+  <error-page>
+    <exception-type>com.mysql.jdbc.exceptions.jdbc4.CommunicationsException</exception-type>
+    <location>/Exception.html</location>
+  </error-page>
 
 </web-app>
